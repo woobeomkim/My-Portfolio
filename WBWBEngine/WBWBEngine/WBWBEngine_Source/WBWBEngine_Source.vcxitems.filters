@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbGameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbBullet.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbTime.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbInput.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbMath.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbApplication.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbLayer.cpp">
+      <Filter>Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbSpriteRenderer.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbTransform.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbEntity.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbResources.cpp">
+      <Filter>Manager\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbTexture.cpp">
+      <Filter>Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbScript.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbBoxCollider2D.cpp">
+      <Filter>Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbCircleCollider2D.cpp">
+      <Filter>Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbCollider.cpp">
+      <Filter>Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbAnimator.cpp">
+      <Filter>Component\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbSceneManager.cpp">
+      <Filter>Manager\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbAnimation.cpp">
+      <Filter>Resource\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbCamera.cpp">
+      <Filter>Component\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbCollisionManager.cpp">
+      <Filter>Manager\CollisionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbRenderer.cpp">
+      <Filter>MainCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbDontDestroyOnLoad.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbTilemapRenderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbGameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbBullet.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbTime.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbInput.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbMath.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbEnums.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbObject.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbApplication.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbSpriteRenderer.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbTransform.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbEntity.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbResources.h">
+      <Filter>Manager\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbTexture.h">
+      <Filter>Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbScript.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbLayer.h">
+      <Filter>Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbBoxCollider2D.h">
+      <Filter>Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbCircleCollider2D.h">
+      <Filter>Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbCollider.h">
+      <Filter>Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbAnimator.h">
+      <Filter>Component\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbSceneManager.h">
+      <Filter>Manager\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbAnimation.h">
+      <Filter>Resource\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbCamera.h">
+      <Filter>Component\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbCollisionManager.h">
+      <Filter>Manager\CollisionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbRenderer.h">
+      <Filter>MainCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbDontDestroyOnLoad.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbTilemapRenderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{49d7f16c-075f-4552-840c-4ecb4e8f4403}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{13fbebf2-c1c1-431b-8440-77d5bf0747c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{f9304bfd-4ddf-4b1d-8224-d83f437c2d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{bcf1dee7-0b06-42ab-a189-0b18663291d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{d7da1cbb-50de-4148-9fd8-fd21093136a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer">
+      <UniqueIdentifier>{42a55bf5-ba53-44bf-896a-50207614532d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{39f34100-a78c-4e29-9428-5e34731e5eb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{5b6c694c-da0f-4de3-a366-ae505d045a5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Texture">
+      <UniqueIdentifier>{0952d8b5-2f97-4405-9a30-6cd669760dab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Collider">
+      <UniqueIdentifier>{ed7529de-1ba8-4170-aaa5-cecbf0cb0ea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Animator">
+      <UniqueIdentifier>{3d3c1bb0-9c1c-42e5-945a-6f07f01236b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{9b9f0e04-113f-440c-a15d-83a61ecbb121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Resources">
+      <UniqueIdentifier>{a7506b1b-5468-4ed9-a3e4-c01fddc51da8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\SceneManager">
+      <UniqueIdentifier>{1d46a19a-4e37-4c6f-9582-dd755fd68dda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Animation">
+      <UniqueIdentifier>{0330262c-ca92-49bd-a1cc-0eda087db8aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Camera">
+      <UniqueIdentifier>{4fb35f94-9fff-4552-b9e5-85e8c8e9efff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\CollisionManager">
+      <UniqueIdentifier>{dcb0f921-d27b-4820-b94b-b9e593c942ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainCamera">
+      <UniqueIdentifier>{b399ba83-ef02-4738-9892-3639925dbde5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

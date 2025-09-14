@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{1a436e00-1f30-4713-b200-7a5375d64730}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbAnimation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbAnimator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbBoxCollider2D.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbCamera.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbCircleCollider2D.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbCollider.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbCollisionManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbComponent.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbDontDestroyOnLoad.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbEnums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbBullet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbGameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbScript.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbSpriteRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbTexture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbTilemapRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbTime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wbTransform.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbAnimation.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbAnimator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbBoxCollider2D.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbBullet.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbCamera.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbCircleCollider2D.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbCollider.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbCollisionManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbComponent.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbDontDestroyOnLoad.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbEntity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbGameObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbScript.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbSpriteRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbTexture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbTilemapRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wbTransform.cpp" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,163 @@
+using GDEUtils.StateMachine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameController : MonoBehaviour
+{
+    [SerializeField] PlayerController playerController;
+    [SerializeField] BattleSystem battleSystem;
+    [SerializeField] Camera worldCamera;
+    [SerializeField] PartyScreen partyScreen;
+    [SerializeField] InventoryUI inventoryUI;
+
+    public StateMachine<GameController> StateMachine { get; private set; }
+
+    PokemonParty playerParty;
+    Pokemon wildPokemon;
+
+    public SceneDetails CurrentScene { get; private set; }
+    public SceneDetails PrevScene { get; private set; }
+
+    public PartyScreen PartyScreen => partyScreen;
+    //MenuController menuController;
+
+    public static GameController i { get; private set; }
+
+    private void Awake()
+    {
+        i = this;
+
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+
+        StatusConditionsDB.Init();
+        PokemonDB.Init();
+        MoveDB.Init();
+        ItemDB.Init();
+        QuestDB.Init();
+        WeatherConditionsDB.Init();
+    }
+
+    private void Start()
+    {
+        StateMachine = new StateMachine<GameController>(this);
+        StateMachine.ChangeState(PauseState.i);
+
+        battleSystem.OnBattleOver += EndBattle;
+
+        partyScreen.Init();
+        
+        DialogManager.i.OnShowDialog += () =>
+        {
+            StateMachine.Push(DialogueState.i);
+        };
+
+        DialogManager.i.OnDialogFinished += () =>
+        {
+            StateMachine.Pop();
+        };
+    }
+
+    public void PauseGame(bool pause)
+    {
+        if (pause)
+        {
+            StateMachine.Push(PauseState.i);
+
+        }
+        else
+        {
+            StateMachine.Pop();
+        }
+    }
+
+    public void StartBattle(BattleTrigger trigger)
+    {
+        BattleState.i.trigger = trigger;
+        StateMachine.Push(BattleState.i);
+    }
+
+    TrainerController trainer;
+    public void StartTrainerBattle(TrainerController trainer)
+    {
+        BattleState.i.trainer = trainer;
+        StateMachine.Push(BattleState.i);
+    }
+
+    public void OnEnterTrainersView(TrainerController trainer)
+    { 
+       StartCoroutine(trainer.TriggerTriainerBattle(playerController));
+    }
+
+    public void EndBattle(bool won)
+    {
+        if(trainer!=null && won == true)
+        {
+            trainer.BattleLost();
+            trainer = null;
+        }
+
+        partyScreen.SetPartyData();
+
+        battleSystem.gameObject.SetActive(false);
+        worldCamera.gameObject.SetActive(true);
+
+        var playerParty = playerController.GetComponent<PokemonParty>();
+        bool hasEvolutions = playerParty.CheckForEvolution();
+
+        if (hasEvolutions)
+            StartCoroutine(playerParty.RunEvolution());
+        else
+            AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
+    }
+
+    private void Update()
+    {
+        StateMachine.Execute();
+    }
+
+    public void SetCurrentScene(SceneDetails currScene)
+    {
+        PrevScene = CurrentScene;
+        CurrentScene = currScene;
+    }
+
+    public IEnumerator MoveCamera(Vector2 moveOffset, bool waitForFadeOut = false)
+    {
+        yield return Fader.i.FadeIn(0.5f);
+
+        worldCamera.transform.position += new Vector3(moveOffset.x, moveOffset.y);
+
+        if (waitForFadeOut)
+            yield return Fader.i.FadeOut(0.5f);
+        else
+            StartCoroutine(Fader.i.FadeOut(0.5f));
+    }
+
+    private void OnGUI()
+    {
+        var style = new GUIStyle();
+        style.fontSize = 24;
+        style.fontStyle = FontStyle.Bold;
+        
+        GUILayout.Label("STATE STACK", style);
+        foreach(var state in StateMachine.StateStack)
+        {
+            GUILayout.Label(state.GetType().ToString(), style);
+        }
+
+        GUILayout.Label("BATTLE STACK", style);
+        if (battleSystem.isActiveAndEnabled)
+        {
+            foreach (var state in battleSystem.StateMachine.StateStack)
+            {
+                GUILayout.Label(state.GetType().ToString(), style);
+            }
+        }
+    }
+
+    public PlayerController PlayerController => playerController;
+    public Camera WorldCamera => worldCamera;
+}
