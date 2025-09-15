@@ -9,13 +9,14 @@
 
 | 프로젝트 이름   | 간단 소개                     | 사용 기술       | 링크 |
 |----------------|-------------------------------|----------------|------|
-| 포켓몬 클론코딩 | 포켓몬 스타일 2D 게임 클론   | Unity, C#      | [바로가기](./2D_PokemonGame) |
-| 턴제 RPG       | 3D 턴제 전투 RPG             | Unity, C#      | [바로가기](./Project_TurnRPG) |
-| 미니 게임 모음 | 다양한 Unity 미니게임 프로젝트 | Unity, C#      | [바로가기](./Project_MiniGames) |
-
+| 포켓몬 클론코딩 | 포켓몬 스타일 2D 게임 클론     | Unity, C#       | [바로가기](./2D_PokemonGame) |
+| Nature Quest   | 학습내용 바꿔보기              | Unity, C#       | [바로가기](./NatureQuest) |
+| Undead Survivor | 뱀서류 클론코딩 학습하기      | Unity, C#       | [바로가기](./Undead_Survivor) |
+| UnityStudy    | 유니티 엔진 학습하기            | Unity, C#      | [바로가기](./UnityStudy) |
+| WBWBEngine    |  게임엔진의 기본루프 학습해보기 | Winapi, C++       | [바로가기](./WBWBEngine/WBWBEngine) |
 ---
 
 ## 🎯 앞으로의 목표
 - 다양한 장르의 게임을 직접 구현하여 실전 경험 쌓기
 - 효율적인 코드 구조와 디자인 패턴 학습
-- 협업과 버전 관리를 통한 팀 개발 경험 확장
+- 협업툴과 버전 관리를 통한 팀 개발 경험 확장
