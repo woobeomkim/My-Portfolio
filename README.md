@@ -10,7 +10,7 @@
 | 프로젝트 이름   | 간단 소개                     | 사용 기술       | 링크 |
 |----------------|-------------------------------|----------------|------|
 | 포켓몬 클론코딩 | 포켓몬 스타일 2D 게임 클론     | Unity, C#       | [바로가기](./2D_PokemonGame) |
-| Nature Quest   | 학습내용 바꿔보기              | Unity, C#       | [바로가기](./NatureQuest) |
+| Nature Quest   | 학습내용 바꿔보기              | Unity, C#       | [바로가기](./NatuerQuest) |
 | Undead Survivor | 뱀서류 클론코딩 학습하기      | Unity, C#       | [바로가기](./Undead_Survivor) |
 | UnityStudy    | 유니티 엔진 학습하기            | Unity, C#      | [바로가기](./UnityStudy) |
 | WBWBEngine    |  게임엔진의 기본루프 학습해보기 | Winapi, C++       | [바로가기](./WBWBEngine/WBWBEngine) |
